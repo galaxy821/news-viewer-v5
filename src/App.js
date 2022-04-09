@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import NewsPage from "./pages/NewsPage";
+import { Route } from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  // const [category, setCategory] = useState("all");
+  // const onSelect = useCallback((category) => setCategory(category), []);
+
+  return <Route path="/:category?" component={NewsPage} />;
+
+  // return (
+  //   <Routes>
+  //     <Route path="/*" element={<NewsPage />} />
+  //     <Route path="/:category" element={<NewsPage />} />
+  //   </Routes>
+  // );
 }
 
 export default App;
